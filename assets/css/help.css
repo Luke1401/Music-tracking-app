@@ -1,0 +1,34 @@
+.helpCountainer {
+    display: block;
+    padding-top: 30px;
+    position: static;
+    /* background-color: wheat; */
+    width: auto;
+    height: 800px;
+    overflow: hidden ;
+}
+
+.qna {
+    position: static;
+    display: inline-block;
+    /* background-color: azure; */
+    width: 1200px;
+    height: auto;
+    padding-left: 100px;
+    padding: 10px 0px 0px 50px;
+    line-height: 15px;
+}
+.questions {
+    color: darkblue;
+    list-style-position: outside;
+    font-weight: bold;
+    width: 100%;
+    font-size: xx-large;
+}
+
+.answers {
+    font-size: larger;
+    padding-left: 70px;
+    height: auto;
+    width: 100%;
+}
