@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body onload="displayRandomName()">
+
+  <div class="leftNavDiv" style="position: fixed;">
+    <ul class="navUL">
+      <li class="profilebox">
+        <a href="pages/Profile.html">
+          <div class="profile">
+            <img class="profilepic" src="assets/images/pfp.jpeg" alt="profile">
+            <div class="profileName">
+              <p class = "username" id="randomName" >Name</p>
+              <div class = "profileCollections">
+                <p class = "username" id="randomCollected">6 Collected</p>
+                <p class = "username" id='randomLevel'>Level '4'</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li><a class="active" href="index.html">Index</a></li>
+      <li><a href="pages/store.html">Store</a></li>
+      <li><a href="pages/Drops.html">Drops</a></li>
+      <li><a href="pages/statistics.html">Statistics</a></li>
+      <li><a href="pages/inventory.html">Inventory</a></li>
+      <li><a href="pages/setting.html">Settings</a></li>
+      <li><a href="pages/help.html">Help</a></li>
+    </ul>
+</div>
+
+  <div style="margin-left:18rem;padding:1px 7px;height:100vh;">
+
+
+  <div class="homepage">
+
+    <div class="listens">
+      <h1 style="text-align: left;">Average Hourly Listens</h1>
+      <canvas id="homeGraph"></canvas>
+    </div>
+
+    <div class="habits">
+      <h1 style="text-align: left;">Listening Habits</h1>
+      <li>
+        Favourite Genre: Pop
+      </li>
+      <li>
+        Most Active Day : Thursday
+      </li>
+      <li>
+        Average Plays per day : 26
+      </li>
+      <li>
+        Av. listening time per day : 73 minutes
+      </li>
+      <li>
+        Total Albums Played : 34
+      </li>
+      <li>
+        Total Songs played : 189
+      </li>
+    </div>
+
+  </div>
+
+  <section class="section-bloc ">
+    <div class="container ">
+      <h3>While you were away!</h3>
+      <div class="bloc">
+        <div class="image-flex one">
+          <a href="pages/inventory.html">
+            <i class="fas fa-crown" style="color: #5d0474;"></i>
+          </a>
+          <div class="away_icon">6</div>
+          Badges
+        </div>
+
+        <div class="image-flex two">
+          <a href="pages/statistics.html">
+            <i class="far fa-play-circle" style="color: #5d0474;"></i>
+          </a>
+          <div class="away_icon">13</div>
+          Plays
+        </div>
+
+        <div class="image-flex three">
+          <a href="pages/statistics.html">
+            <i class="far fa-clock" style="color: #5d0474;"></i>
+          </a>
+          <div class="away_icon">35</div>
+          Minutes
+        </div>
+
+        <div class="image-flex four">
+          <a href="pages/drops.html">
+            <i class="fas fa-gift" style="color: #5d0474;"></i>
+          </a>
+          <div class="away_icon">2</div>
+          Drops
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="assets/js/home.js"></script>
+<script src="assets/js/randomName.js"></script>
+</body>
+</html>
+
+
+
+
+
+
