@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <!--meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+  <title>Store</title>
+  <!--meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1"-->
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/store.css">
+
+</head>
+
+<body onload="displayRandomName()">
+
+  <div class="fullContainer">
+    <!-- style="background-color: rgb(213, 231, 231)"> -->
+
+
+      <!-- Menu/Nav Bar -->
+      <div class="leftNavDiv">
+        <ul class="navUL">
+          <li class="profilebox">
+            <a href="./profile.html">
+              <div class="profile">
+                <img class="profilepic" src="../assets/images/pfp.jpeg" alt="profile">
+                <div class="profileName">
+                  <p class="username" id="randomName">Eren Jaeger</p>
+                  <div class = "profileCollections">
+                    <p class = "username" id="randomCollected">6 Collected</p>
+                    <p class = "username" id='randomLevel'>Level '4'</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a class="active" href="store.html">Store</a></li>
+          <li><a href="Drops.html">Drops</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="setting.html">Settings</a></li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
+  </div>
+  
+  <!--Menu/Nav Bar-->
+
+      <div class="mainContainer">
+        <!-- style="background-color: rgb(129, 145, 170)"> -->
+        <div class="topDiv">
+          <img class="pageLogo" src="../assets/images/store.svg" width="200vw" height="200vh" alt="Store_Front">
+          <!-- logo taken from https://api.iconify.design/carbon/store.svg?width=200&height=200 -->
+          <p class="pageTitle">Store</p>
+        </div>
+  
+        <!-- Print all the item_divs -->
+        <div id="allItems" class="allItems">
+  
+          <!-- this section is being done by store.js -->
+  
+        </div>
+        <script type="text/javascript" src="../assets/js/store.js" defer></script>
+      </div>
+      
+      <!-- ----------------------- -->
+    
+    
+  </div>  
+  <script src="../assets/js/randomName.js"></script>
+</body>
+
+</html>

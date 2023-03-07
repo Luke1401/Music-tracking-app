@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/drops.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>Drops</title>
+</head>
+<body onload="displayRandomName()">
+
+  <div class="allDrops" hidden>
+    <img id="christmas" src="../assets/images/bag christmas.png" alt="Crhistmas">
+    <img id="ditto" src="../assets/images/bag ditto.png" alt="Ditto">
+    <img id="music" src="../assets/images/bag music.png" alt="Music">
+    <img id="original" src="../assets/images/bag original.png" alt="Original">
+    <img id="sleep" src="../assets/images/bag sleep.png" alt="Sleep">
+    <img id="spooky" src="../assets/images/bag spooky.png" alt="Spooky">
+    <img id="sus" src="../assets/images/bag sus.png" alt="Sus">
+  </div>
+
+    <div class="fullContainer">
+      <!-- Menu/Nav Bar -->
+      <div class="leftNavDiv">
+        <ul class="navUL">
+          <li class="profilebox">
+            <a href="./profile.html">
+              <div class="profile">
+                <img class="profilepic" src="../assets/images/pfp.jpeg" alt="profile">
+                <div class="profileName">
+                  <p class = "username" id="randomName" >Name</p>
+                  <div class = "profileCollections">
+                    <p class = "username" id="randomCollected">6 Collected</p>
+                    <p class = "username" id='randomLevel'>Level '4'</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a class="active" href="Drops.html">Drops</a></li>
+          <li><a href="statistics.html">Statistics</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="setting.html">Settings</a></li>
+          <li><a href="help.html">Help</a></li>
+        </ul>
+  </div>
+     
+      <!--Menu/Nav Bar-->
+
+        <div class="mainContainer">
+          <div class="topDiv">
+            <img class="pageLogo" src="../assets/images/drops.svg" width="200vw" height="200vh" alt="Store_Front">
+            <!-- logo taken from https://api.iconify.design/icon-park-outline/treasure-chest.svg?width=200&height=200 -->
+            <p class="pageTitle">Drops</p>
+          </div>
+            <h1 class="Featured">Featured</h1>
+            <img class="mystery" src="../assets/images/Mystery box.png" alt="mystery box">
+            <div class="open">
+              <button class="open" onclick = "openDrops();displayRandomImage()" id="button1">Open x1</button>
+              <button class="open" id="button2">Open x10</button>
+            </div>
+
+            <button class="open" onclick = "openForm()" id="button3">drop rate</button>
+
+<!--everything below is for the popup-->
+            <div class="popup" id="myPopup">
+                <div class="popup_container">
+                  <button class="close" onclick="closeForm()">&times;</button>
+                  <h1 id="drop">Drop Rates</h1>
+                  
+                  <div class="container_contents">
+                    <h2>SSR 3%</h2>
+                    <p class="content">Regular = 2.95%<br>NFT = 0.05%</p>
+                    <h2> SR &nbsp; 7%</h2>
+                    <p class="content">Regular = 6.90%<br>NFT = 0.10%</p>
+                    <h2>R &nbsp;&nbsp;&nbsp; 20%</h2>
+                    <p class="content">Regular = 19.80%<br>NFT = 0.20%</p>
+                    <h2> N &nbsp;&nbsp;&nbsp; 70%</h2>
+                    <p class="content">Regular = 69.50%<br>NFT = 0.50%</p>
+                  </div>
+                </div>
+                
+            </div>
+            <div class="popup" id="drop1">
+              <div class="popup_container">
+                <button class="close" onclick="closeDrops()">&times;</button>
+                <h1 id="drop">Obtained</h1>
+                <h2 id=rarity>df</h2>
+                <img class="obtained" id="randomImage">
+              </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--script for the popup-->
+<script>
+    function openForm() {
+        document.getElementById("myPopup").style.display = "block";
+    }
+    function closeForm() {
+        document.getElementById("myPopup").style.display = "none";
+    }
+    function openDrops() {
+        document.getElementById("drop1").style.display = "block";
+    }
+    function closeDrops() {
+        document.getElementById("drop1").style.display = "none";
+    }
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    function getRandomImage() {
+      var images =['../assets/images/bag original.png',
+                    '../assets/images/bag ditto.png',
+                    '../assets/images/bag christmas.png',
+                    '../assets/images/bag music.png',
+                    '../assets/images/bag sleep.png',
+                    '../assets/images/bag spooky.png',
+                    '../assets/images/bag sus.png'];
+      var rarity = getRandomInt(10000) + 1;
+      var rarityText = document.getElementById("rarity");
+      var rarityNum;
+
+      if(rarity <= 6950) {
+        image = images[getRandomInt(1)];        //common
+        rarityText.innerHTML = "Common";
+      }
+      else if(rarity > 6950 && rarity <= 7000) {
+        image = images[getRandomInt(1) + 1]     //common NFT
+        rarityText.innerHTML = "Common NFT";
+      }
+      else if(rarity > 7000 && rarity <= 8980) {
+        image = images[getRandomInt(1) + 2]     //rare
+        rarityText.innerHTML = "Rare";
+      }
+      else if(rarity > 8980 && rarity <= 9000) {
+        image = images[getRandomInt(1) + 3]     //rare NFT
+        rarityText.innerHTML = "Rare NFT";
+      }
+      else if(rarity > 9000 && rarity <= 9690) {
+        image = images[getRandomInt(1) + 4]     //SR
+        rarityText.innerHTML = "SR";
+      }
+      else if(rarity > 9690 && rarity <= 9700) {
+        image = images[getRandomInt(1) + 5]     //SR NFT
+        rarityText.innerHTML = "SR NFT";
+      }
+      else if(rarity > 9700 && rarity <= 9995) {
+        image = images[getRandomInt(1) + 6]     //SSR
+        rarityText.innerHTML = "SSR";
+      }
+      else if(rarity > 9995 && rarity <= 10000) {
+        image = images[getRandomInt(1) + 6]     //SSR NFT
+        rarityText.innerHTML = "SSR NFT";
+      }
+      
+      return image
+    }
+
+    function displayRandomImage() {
+      var collectedStr = document.getElementById("randomCollected").innerHTML;
+      var collected = (parseInt(collectedStr) + 1);
+      var image = document.getElementById("randomImage");
+      document.getElementById("randomImage").style.display = "block";
+      image.src = getRandomImage();
+      collectedStr.innerHTML = collected + " collected";
+    }
+        //set and return random names
+        function getRandomName() {
+        var names = [['Eren Jaegar', 2, 2],
+                      ['Jrem Eaegar', 3, 2], 
+                      ['John Smith', 5, 3],
+                      ['MusicMan1994', 1, 1],
+                      ['NFTlover', 10, 5],
+                      ['Cit Boin', 20, 8],
+                      ['Random Man', 0, 0]];
+          
+        var selectedName = getRandomInt(names.length);
+        return names[selectedName];
+      }
+  
+      //change any text with id="randomName" into randomly chosen name
+      function displayRandomName() {
+        var name = document.getElementById("randomName");
+        var collected = document.getElementById("randomCollected");
+        var level = document.getElementById("randomLevel");
+
+        var info = getRandomName();
+        name.innerHTML = info[0];
+        collected.innerHTML = 'Collected ' + info[1];
+        level.innerHTML = 'Level ' + info[2];
+      }
+</script>
+
+</body>
+</html>

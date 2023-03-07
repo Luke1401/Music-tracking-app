@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+<link rel="stylesheet" href="../assets/css/base.css">
+</head>
+<body onload="displayRandomName()">
+
+<!-- Menu/Nav Bar -->
+<div class="leftNavDiv" >
+  <ul class="navUL">
+    <li class="profilebox">
+      <a class="active" href="./profile.html">
+        <div class="profile">
+          <img class="profilepic" src="../assets/images/pfp.jpeg" alt="profile">
+          <div class="profileName">
+            <p class = "username" id="randomName" >Name</p>
+            <div class = "profileCollections">
+              <p class = "username" id="randomCollected">6 Collected</p>
+              <p class = "username" id='randomLevel'>Level '4'</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="store.html">Store</a></li>
+    <li><a href="Drops.html">Drops</a></li>
+    <li><a href="statistics.html">Statistics</a></li>
+    <li><a href="inventory.html">Inventory</a></li>
+    <li><a href="setting.html">Settings</a></li>
+    <li><a href="help.html">Help</a></li>
+  </ul>
+</div>
+
+<!--Menu/Nav Bar-->
+
+<!--Menu/Nav Bar-->
+<div class="topDiv">
+  <img class="pageLogo" src="../assets/images/profile.svg" width="200vw" height="200vh" alt="Store_Front">
+  <!-- logo taken from https://api.iconify.design/carbon/store.svg?width=200&height=200 -->
+  <p class="pageTitle">Profile</p>
+</div>
+
+<div style="margin-left:18rem;padding:1px 7px;height:100vh;">
+    <div class="first">
+      <div class="photo">
+        <img class ="profile_photo" src="../assets/images/pfp.jpeg">
+      </div>
+      <div class="photo_text">
+        <li><span class="profile_name">
+          Eren Jaegar
+        </span>
+        </li>
+        <li>
+          Level 'X'
+        </li>
+        <li>
+          Drops 'Y'
+        </li>
+        <li>
+          UserID: erenJaegar
+        </li>
+      </div>
+    </div>
+    <div class="second">
+      <div class="user_information">
+       
+        <p class="user">
+          User Information
+        </p>
+  
+      </div>
+      <div class="user_info_contents">
+        <li> 
+          Date of Birth : &nbsp;April 10, 1990
+        </li>
+        <li>
+          City :  Winnipeg
+        </li>
+        <li>
+          Phone :   XXX-XXX-XXXX
+        </li>
+        <li>
+          Email :   erenjaeger@eren.com
+        </li>
+      </div>
+    </div>
+
+    <div class="third">
+      <div class="edit_information">
+       
+        <p class="edit">
+          Edit
+        </p>
+  
+      </div>
+      <div class="edit_contents">
+        <li> 
+          Email
+          <input type="text" placeholder="Enter new Email" id=email name="email" required>
+        </li>
+        <li>
+          Password
+          <input type="text" placeholder="Enter new Password" id=password name="password" required>
+        </li>
+        <li>
+          UserID
+          <input type="text" placeholder="Enter new userID" id=userID name="userID" required>
+        </li>
+      </div>
+    </div>
+  
+</div>
+<script src="../assets/js/randomName.js"></script>
+</body>
+</html>
+
+
+
+
+

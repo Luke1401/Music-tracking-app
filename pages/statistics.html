@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Statistics</title>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/statistics.css">
+</head>
+<body onload="displayRandomName()">
+  <div class="fullContainer">
+      <!-- Menu/Nav Bar -->
+      <div class="leftNavDiv">
+            <ul class="navUL">
+              <li class="profilebox">
+                <a href="./profile.html">
+                  <div class="profile">
+                    <img class="profilepic" src="../assets/images/pfp.jpeg" alt="profile">
+                    <div class="profileName">
+                      <p class="username" id="randomName">Eren Jaeger</p>
+                      <div class = "profileCollections">
+                        <p class = "username" id="randomCollected">6 Collected</p>
+                        <p class = "username" id='randomLevel'>Level '4'</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="store.html">Store</a></li>
+              <li><a href="Drops.html">Drops</a></li>
+              <li><a class="active" href="statistics.html">Statistics</a></li>
+              <li><a href="inventory.html">Inventory</a></li>
+              <li><a href="setting.html">Settings</a></li>
+              <li><a href="help.html">Help</a></li>
+            </ul>
+      </div>
+      
+      <!--Menu/Nav Bar-->
+
+
+      <div class="mainContainer">
+        <div class="upperDiv">
+          <div class="recentTracksContainer">
+            <div class = "title-bar">Recent Tracks</div>
+            
+            <div class = "recent-track">
+              <div id="trackImg0" class="trackImg"></div>
+              <div class="songInfo">
+                <div id="trackName0" class="trackName"></div>
+                <div id="trackDesc0" class="trackDesc"></div>
+              </div>
+            </div>
+            
+            <div class = "recent-track">
+              <div id="trackImg1" class="trackImg"></div>
+              <div class="songInfo">
+                <div id="trackName1" class="trackName"></div>
+                <div id="trackDesc1" class="trackDesc"></div>
+              </div>
+            </div>
+
+            <div class = "recent-track">
+              <div id="trackImg2" class="trackImg"></div>
+              <div class="songInfo">
+                <div id="trackName2" class="trackName"></div>
+                <div id="trackDesc2" class="trackDesc"></div>
+              </div>
+            </div>
+
+            <div class = "recent-track">
+              <div id="trackImg3" class="trackImg"></div>
+              <div class="songInfo">
+                <div id="trackName3" class="trackName"></div>
+                <div id="trackDesc3" class="trackDesc"></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="chartButtonDiv">
+            <button class="buttons" onclick="week()">7 Days</button>
+            <button class="buttons" onclick="month()">30 Days</button>
+          </div>
+          <div class="chart">
+            <canvas id="chartCanvas"></canvas>
+          </div>
+        </div> 
+
+        <div class="lowerDiv">
+          <div class = "title-bar">Top Albums</div>
+          <div class="topAlbumsContainers">
+            
+            <div class="topAlbumsDiv">
+              <div id="albumImage0" class="albumImage"></div>
+              <div id="albumTitle0" class="albumTitle"></div>
+              <div id="numberOfPlays0" class="numberOfPlays"></div>
+            </div>
+
+            <div class="topAlbumsDiv">
+              <div id="albumImage1" class="albumImage"></div>
+              <div id="albumTitle1" class="albumTitle"></div>
+              <div id="numberOfPlays1" class="numberOfPlays"></div>
+            </div>
+
+            <div class="topAlbumsDiv">
+              <div id="albumImage2" class="albumImage"></div>
+              <div id="albumTitle2" class="albumTitle"></div>
+              <div id="numberOfPlays2" class="numberOfPlays"></div>
+            </div>
+
+            
+
+            <div class="topAlbumsDiv" >
+              <div class="albumImage compareText" >
+                <h3 style="margin: 0px;">New Songs Discovered</h3>
+                <p id="ran1" style="position: relative;"></p>
+                <p style="position: relative;">vs</p>
+                <p id="ran2" style="position: relative;"></h4>
+              </div>
+
+              <div class="albumImage compareText" style="margin-top: 8%;">
+                <h3 style="margin: 0px;">New Albums Discovered</h3>
+                <p id="ran3" style="position: relative;"></p>
+                <p style="position: relative;">vs</p>
+                <p id="ran4" style="position: relative;"></h4>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ----------------------- -->
+  </div>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="../assets/js/statistics.js"></script>
+<script src="../assets/js/randomName.js"></script>
+
+</body>
+</html>
+
+
+

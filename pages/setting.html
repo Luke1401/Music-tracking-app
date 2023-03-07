@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Setting</title>
+        <link rel="stylesheet" href="../assets/css/base.css">
+        <link rel="stylesheet" href="../assets/css/store.css">
+        <style>
+            .button {
+                font-size: 15px;
+                color: white;
+                background: #b87ac7;
+                border: 2px solid #b87ac7;
+                border-radius: 15px;
+                padding: 15px;
+                width: 120px;
+                margin-left: 300px ;
+                top: 50px;
+                position: relative
+            }
+
+            .button:hover {
+                background-color: #7d3f8d;
+                border-color: #7d3f8d;
+                color: white;
+            }
+
+            .button:active {
+              transition: none;
+              background-color: #5d0474;
+              border: 2px solid #5d0474;
+              color: white;
+            }
+
+        </style>
+    </head>
+    <body onload="displayRandomName()">
+
+        <div class="fullContainer">
+          <div class="leftNavDiv">
+            <div class="navBar">
+              <div class="navList">
+                <ul class="navUL">
+                  <li class = "profilebox"><a href = "./profile.html" style = "text-decoration:none;">
+                    <div class = "profile">
+                      <img class ="profilepic" src="../assets/images/pfp.jpeg" alt ="profile">
+                      <div class = "profileName">
+                        <p class = "username" id="randomName">Eren Jaeger</p>
+                        <div class = "profileCollections">
+                          <p class = "username" id="randomCollected">6 Collected</p>
+                          <p class = "username" id='randomLevel'>Level '4'</p>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </a></li>
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="store.html">Store</a></li>
+                  <li><a href="Drops.html">Drops</a></li>
+                  <li><a href="statistics.html">Statistics</a></li>
+                  <li><a href="inventory.html">Inventory</a></li>
+                  <li><a class="active" style="font-size: 28px;" href="setting.html">Settings</a></li>
+                  <li><a href="help.html">Help</a></li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+
+          <div class="topDiv">
+            <!-- logo taken from https://api.iconify.design/carbon/settings.svg?width=200&height=200 -->
+            <img class="pageLogo" src="../assets/images/settings.svg" width="200vw" height="200vh" alt="settingIcon">
+            <p class="pageTitle">Settings</p>
+          </div>
+
+          <div class="mainContainer">
+            <h1 style="text-indent: 0.5cm;">Display Preferences</h1>
+              <h3 style="text-indent: 1cm;">Recent Tracks</h3>
+              <form style="text-indent: 1.5cm;">
+                <label for="quantity">Number of tracks:</label>
+                <input type="number" id="quantity" name="quantity" min="5" max="25" step="5" value="5">
+                <!--input type="submit" value="Save changes"-->
+              </form>
+                <h3 style="text-indent: 1cm;">Top Artist</h3>
+                <p style="text-indent: 1.5cm;">Time Frame</p>
+                <div style="text-indent: 1.5cm;">
+                  <select id="timeframe">
+                    <option class="non" value="option1">Day</option>
+                    <option class="non" value="option2">Week</option>
+                    <option class="non" value="option3">Month</option>
+                    <option class="non" value="option4">Year</option>
+                  </select>
+                </div>
+                <p style="text-indent: 1.5cm;">Chart Style</p>
+                <div style="text-indent: 1.5cm;">
+                  <select id="chartstyle">
+                    <option class="non" value="option1">Default</option>
+                    <option class="non" value="option2">Image grid, 4 albums</option>
+                    <option class="non" value="option3">Image grid, 8 albums</option>
+                    <option class="non" value="option4">Chart list, 5 albums</option>
+                    <option class="non" value="option5">Chart list, 10 albums</option>
+                  </select>
+                </div>
+                <h3 style="text-indent: 1cm;">Top Album</h3>
+                <p style="text-indent: 1.5cm;">Time Line</p>
+                <div style="text-indent: 1.5cm;">
+                  <select id="timeline">
+                    <option class="non" value="option1">Week</option>
+                    <option class="non" value="option2">Month</option>
+                    <option class="non" value="option3">Year</option>
+                  </select>
+                </div>
+                <!--p style="text-indent: 1.5cm;">Chart Style</p>
+                <div style="text-indent: 1.5cm;">
+                    <select id="chartstyle">
+                      <option class="non" value="option1">Default</option>
+                      <option class="non" value="option2">Image grid, 4 albums</option>
+                      <option class="non" value="option3">Image grid, 8 albums</option>
+                      <option class="non" value="option4">Chart list, 5 albums</option>
+                      <option class="non" value="option5">Chart list, 10 albums</option>
+                    </select>
+                </div>
+                <h3 style="text-indent: 1cm;">Theme</h3-->
+                
+            <a id="myButton" class="button">SAVE CHANGES</a>
+          </div>
+          
+        </div>
+        <script>
+
+          let settingsSaved = document.getElementById("myButton");
+          
+          settingsSaved.onclick = function(){
+            let saved = document.createElement("div");
+            saved.classList.add('itemBought');
+            let text = document.createTextNode('Settings Saved.');
+            saved.appendChild(text);
+            let body = document.body.appendChild(saved);
+            
+            setTimeout(function() {
+              saved.style.transition = '1s';
+              saved.style.opacity = 0;
+            }, 2000);
+
+        }
+        </script>
+        <script src="../assets/js/randomName.js"></script>
+    </body>
+</html>
